@@ -1,0 +1,691 @@
+Release 14.5 - xst P.58f (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+Reading design: hello_eth.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "hello_eth.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "hello_eth"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : hello_eth
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../ethlib/ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/dcarvin/provided_sources/ethlib/ipcore_dir/fifo_core.vhd" into library work
+Parsing entity <fifo_core>.
+Parsing architecture <fifo_core_a> of entity <fifo_core>.
+Parsing VHDL file "/home/dcarvin/provided_sources/ethlib/MAC2PHY4IR.vhd" into library work
+Parsing entity <mac2phy4IR>.
+Parsing architecture <Behavioral> of entity <mac2phy4ir>.
+Parsing VHDL file "/home/dcarvin/provided_sources/ethlib/ethcrc32.vhd" into library work
+Parsing entity <ethcrc32>.
+Parsing architecture <nano> of entity <ethcrc32>.
+Parsing VHDL file "/home/dcarvin/provided_sources/ethlib/bemac4RT.vhd" into library work
+Parsing package <BEMAC4RT>.
+Parsing package body <BEMAC4RT>.
+Parsing VHDL file "/home/dcarvin/provided_sources/ethlib/hello_eth.vhd" into library work
+Parsing entity <hello_eth>.
+Parsing architecture <Behavioral> of entity <hello_eth>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <hello_eth> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ethcrc32> (architecture <nano>) from library <work>.
+
+Elaborating entity <mac2phy4IR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <fifo_core> (architecture <fifo_core_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <hello_eth>.
+    Related source file is "/home/dcarvin/provided_sources/ethlib/hello_eth.vhd".
+INFO:Xst:3210 - "/home/dcarvin/provided_sources/ethlib/hello_eth.vhd" line 167: Output port <COLLISION> of the instance <m2p> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <crc_rst>.
+    Found 1-bit register for signal <crc_is_msb>.
+    Found 1-bit register for signal <crc_en>.
+    Found 1-bit register for signal <crc_clk>.
+    Found 7-bit register for signal <byte_num>.
+    Found 8-bit register for signal <m2p_TDATA>.
+    Found 4-bit register for signal <nb_received_frame>.
+    Found 4-bit register for signal <nb_error_frame>.
+    Found 2-bit register for signal <state>.
+    Found 26-bit register for signal <timer>.
+    Found 8-bit register for signal <data_received<3>>.
+    Found 8-bit register for signal <data_received<2>>.
+    Found 8-bit register for signal <data_received<1>>.
+    Found 8-bit register for signal <data_received<0>>.
+    Found 8-bit register for signal <crc_data_in>.
+    Found 1-bit register for signal <m2p_TXVALID>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | local_clk (rising_edge)                        |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_144_OUT> created at line 280.
+    Found 26-bit adder for signal <timer[25]_GND_5_o_add_69_OUT> created at line 220.
+    Found 4-bit adder for signal <nb_received_frame[3]_GND_5_o_add_100_OUT> created at line 256.
+    Found 4-bit adder for signal <nb_error_frame[3]_GND_5_o_add_101_OUT> created at line 258.
+    Found 7-bit adder for signal <byte_num[6]_GND_5_o_add_163_OUT> created at line 311.
+    Found 6-bit subtractor for signal <GND_5_o_GND_5_o_sub_139_OUT<5:0>> created at line 276.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_145_OUT<1:0>> created at line 280.
+    Found 6-bit subtractor for signal <GND_5_o_GND_5_o_sub_151_OUT<5:0>> created at line 287.
+    Found 8-bit 4-to-1 multiplexer for signal <GND_5_o_crc[3][7]_wide_mux_145_OUT> created at line 280.
+    Found 7-bit comparator lessequal for signal <byte_num[6]_GND_5_o_LessThan_76_o> created at line 224
+    Found 7-bit comparator greater for signal <GND_5_o_byte_num[6]_LessThan_82_o> created at line 228
+    Found 7-bit comparator greater for signal <GND_5_o_byte_num[6]_LessThan_123_o> created at line 274
+    Found 7-bit comparator greater for signal <byte_num[6]_PWR_5_o_LessThan_124_o> created at line 274
+    Found 7-bit comparator greater for signal <PWR_5_o_byte_num[6]_LessThan_142_o> created at line 279
+    Found 7-bit comparator greater for signal <byte_num[6]_PWR_5_o_LessThan_143_o> created at line 279
+    Found 7-bit comparator greater for signal <GND_5_o_byte_num[6]_LessThan_149_o> created at line 284
+    Found 7-bit comparator greater for signal <byte_num[6]_GND_5_o_LessThan_150_o> created at line 284
+    Found 7-bit comparator greater for signal <GND_5_o_byte_num[6]_LessThan_155_o> created at line 290
+    Found 7-bit comparator greater for signal <byte_num[6]_GND_5_o_LessThan_156_o> created at line 290
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred  94 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred  48 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <hello_eth> synthesized.
+
+Synthesizing Unit <ethcrc32>.
+    Related source file is "/home/dcarvin/provided_sources/ethlib/ethcrc32.vhd".
+    Found 32-bit register for signal <crc_buf>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ethcrc32> synthesized.
+
+Synthesizing Unit <mac2phy4IR>.
+    Related source file is "/home/dcarvin/provided_sources/ethlib/MAC2PHY4IR.vhd".
+WARNING:Xst:647 - Input <RXER> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/dcarvin/provided_sources/ethlib/MAC2PHY4IR.vhd" line 142: Output port <full> of the instance <fifoRX> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <first_nibble>.
+    Found 4-bit register for signal <TXD>.
+    Found 8-bit register for signal <RXDbuf>.
+    Found 1-bit register for signal <TXEN>.
+    Found 4-bit register for signal <nTXD>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <mac2phy4IR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 2-bit subtractor                                      : 1
+ 26-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 21
+ 1-bit register                                        : 7
+ 26-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 7-bit register                                        : 1
+ 8-bit register                                        : 7
+# Comparators                                          : 10
+ 7-bit comparator greater                              : 9
+ 7-bit comparator lessequal                            : 1
+# Multiplexers                                         : 50
+ 1-bit 2-to-1 multiplexer                              : 3
+ 26-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 38
+ 8-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 16
+ 32-bit xor2                                           : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../ethlib/ipcore_dir/fifo_core.ngc>.
+Loading core <fifo_core> for timing and area information for instance <fifoRX>.
+
+Synthesizing (advanced) Unit <hello_eth>.
+The following registers are absorbed into counter <nb_received_frame>: 1 register on signal <nb_received_frame>.
+The following registers are absorbed into counter <nb_error_frame>: 1 register on signal <nb_error_frame>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+Unit <hello_eth> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 2-bit subtractor borrow in                            : 1
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 1
+# Counters                                             : 3
+ 26-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 110
+ Flip-Flops                                            : 110
+# Comparators                                          : 10
+ 7-bit comparator greater                              : 9
+ 7-bit comparator lessequal                            : 1
+# Multiplexers                                         : 56
+ 1-bit 2-to-1 multiplexer                              : 11
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 37
+ 8-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 16
+ 32-bit xor2                                           : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with sequential encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ idle         | 00
+ receiving    | 10
+ decoding_crc | 11
+ transmitting | 01
+--------------------------
+
+Optimizing unit <hello_eth> ...
+
+Optimizing unit <mac2phy4IR> ...
+
+Optimizing unit <ethcrc32> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block hello_eth, actual ratio is 4.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <m2p/fifoRX> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <m2p/fifoRX> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <m2p/fifoRX> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+FlipFlop byte_num_0 has been replicated 2 time(s)
+FlipFlop byte_num_1 has been replicated 2 time(s)
+FlipFlop byte_num_2 has been replicated 1 time(s)
+FlipFlop byte_num_3 has been replicated 1 time(s)
+FlipFlop byte_num_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <hello_eth> :
+	Found 3-bit shift register for signal <data_received_3_0>.
+	Found 3-bit shift register for signal <data_received_3_1>.
+	Found 3-bit shift register for signal <data_received_3_2>.
+	Found 3-bit shift register for signal <data_received_3_3>.
+	Found 3-bit shift register for signal <data_received_3_4>.
+	Found 3-bit shift register for signal <data_received_3_5>.
+	Found 3-bit shift register for signal <data_received_3_6>.
+	Found 3-bit shift register for signal <data_received_3_7>.
+Unit <hello_eth> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Shift Registers                                      : 8
+ 3-bit shift register                                  : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : hello_eth.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 428
+#      GND                         : 2
+#      INV                         : 11
+#      LUT1                        : 25
+#      LUT2                        : 33
+#      LUT3                        : 52
+#      LUT4                        : 59
+#      LUT5                        : 37
+#      LUT6                        : 149
+#      MUXCY                       : 25
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 237
+#      FD                          : 32
+#      FDC                         : 63
+#      FDCE                        : 89
+#      FDE                         : 28
+#      FDP                         : 16
+#      FDPE                        : 5
+#      FDRE                        : 4
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Shift Registers                  : 8
+#      SRLC16E                     : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 32
+#      IBUF                        : 15
+#      OBUF                        : 17
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             237  out of  18224     1%  
+ Number of Slice LUTs:                  374  out of   9112     4%  
+    Number used as Logic:               366  out of   9112     4%  
+    Number used as Memory:                8  out of   2176     0%  
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    451
+   Number with an unused Flip Flop:     214  out of    451    47%  
+   Number with an unused LUT:            77  out of    451    17%  
+   Number of fully used LUT-FF pairs:   160  out of    451    35%  
+   Number of unique control sets:        26
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  34  out of    232    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRL/BUFHCEs:         3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+TXCLK                              | BUFGP                  | 164   |
+crc_clk                            | BUFG                   | 32    |
+RXCLK                              | BUFGP                  | 51    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.955ns (Maximum Frequency: 167.924MHz)
+   Minimum input arrival time before clock: 6.371ns
+   Maximum output required time after clock: 3.762ns
+   Maximum combinational path delay: 6.389ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'TXCLK'
+  Clock period: 5.955ns (frequency: 167.924MHz)
+  Total number of paths / destination ports: 3820 / 295
+-------------------------------------------------------------------------
+Delay:               5.955ns (Levels of Logic = 4)
+  Source:            timer_12 (FF)
+  Destination:       timer_0 (FF)
+  Source Clock:      TXCLK rising
+  Destination Clock: TXCLK rising
+
+  Data Path: timer_12 to timer_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   1.048  timer_12 (timer_12)
+     LUT6:I0->O            1   0.203   0.827  PWR_5_o_timer[25]_equal_69_o<25>2 (PWR_5_o_timer[25]_equal_69_o<25>1)
+     LUT6:I2->O           30   0.203   1.264  PWR_5_o_timer[25]_equal_69_o<25>5 (PWR_5_o_timer[25]_equal_69_o)
+     LUT6:I5->O           26   0.205   1.454  Reset_OR_DriverANDClockEnable261 (Reset_OR_DriverANDClockEnable)
+     LUT4:I0->O            1   0.203   0.000  timer_0_rstpot (timer_0_rstpot)
+     FD:D                      0.102          timer_0
+    ----------------------------------------
+    Total                      5.955ns (1.363ns logic, 4.592ns route)
+                                       (22.9% logic, 77.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'crc_clk'
+  Clock period: 2.909ns (frequency: 343.802MHz)
+  Total number of paths / destination ports: 138 / 32
+-------------------------------------------------------------------------
+Delay:               2.909ns (Levels of Logic = 2)
+  Source:            crc_core/crc_buf_30 (FF)
+  Destination:       crc_core/crc_buf_5 (FF)
+  Source Clock:      crc_clk rising
+  Destination Clock: crc_clk rising
+
+  Data Path: crc_core/crc_buf_30 to crc_core/crc_buf_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            17   0.447   1.372  crc_core/crc_buf_30 (crc_core/crc_buf_30)
+     LUT5:I0->O            1   0.203   0.580  crc_core/Mmux_crc_buf[30]_crc_buf[30]_mux_32_OUT28_SW0 (N31)
+     LUT6:I5->O            1   0.205   0.000  crc_core/Mmux_crc_buf[30]_crc_buf[30]_mux_32_OUT28 (crc_core/crc_buf[30]_crc_buf[30]_mux_32_OUT<5>)
+     FDCE:D                    0.102          crc_core/crc_buf_5
+    ----------------------------------------
+    Total                      2.909ns (0.957ns logic, 1.952ns route)
+                                       (32.9% logic, 67.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RXCLK'
+  Clock period: 2.760ns (frequency: 362.306MHz)
+  Total number of paths / destination ports: 199 / 110
+-------------------------------------------------------------------------
+Delay:               2.760ns (Levels of Logic = 2)
+  Source:            m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i (FF)
+  Destination:       m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      RXCLK rising
+  Destination Clock: RXCLK rising
+
+  Data Path: m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i to m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.447   0.995  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i)
+     LUT5:I0->O            1   0.203   0.808  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_168_o_MUX_19_o12 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_168_o_MUX_19_o11)
+     LUT6:I3->O            2   0.205   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_168_o_MUX_19_o16 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_168_o_MUX_19_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      2.760ns (0.957ns logic, 1.803ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'TXCLK'
+  Total number of paths / destination ports: 259 / 134
+-------------------------------------------------------------------------
+Offset:              6.371ns (Levels of Logic = 7)
+  Source:            NUM<2> (PAD)
+  Destination:       crc_data_in_0 (FF)
+  Destination Clock: TXCLK rising
+
+  Data Path: NUM<2> to crc_data_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  NUM_2_IBUF (NUM_2_IBUF)
+     LUT3:I0->O            1   0.205   0.580  NUM[7]_GND_5_o_equal_7_o<7>_SW0 (N2)
+     LUT6:I5->O            6   0.205   1.109  NUM[7]_GND_5_o_equal_7_o<7> (NUM[7]_GND_5_o_equal_7_o)
+     LUT6:I0->O            1   0.203   0.000  Mmux_GND_5_o_X_5_o_wide_mux_151_OUT13_G (N136)
+     MUXF7:I1->O           1   0.140   0.808  Mmux_GND_5_o_X_5_o_wide_mux_151_OUT13 (Mmux_GND_5_o_X_5_o_wide_mux_151_OUT11)
+     LUT6:I3->O            1   0.205   0.580  mux81 (state[1]_crc_data_in[7]_wide_mux_178_OUT<0>)
+     LUT3:I2->O            1   0.205   0.000  crc_data_in_0_dpot (crc_data_in_0_dpot)
+     FDE:D                     0.102          crc_data_in_0
+    ----------------------------------------
+    Total                      6.371ns (2.487ns logic, 3.884ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RXCLK'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              3.927ns (Levels of Logic = 3)
+  Source:            RXDV (PAD)
+  Destination:       m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_5 (FF)
+  Destination Clock: RXCLK rising
+
+  Data Path: RXDV to m2p/fifoRX/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.109  RXDV_IBUF (RXDV_IBUF)
+     begin scope: 'm2p/fifoRX:wr_en'
+     LUT2:I0->O           19   0.203   1.071  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
+     FDPE:CE                   0.322          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
+    ----------------------------------------
+    Total                      3.927ns (1.747ns logic, 2.180ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'TXCLK'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              3.762ns (Levels of Logic = 1)
+  Source:            nb_error_frame_0 (FF)
+  Destination:       LED<4> (PAD)
+  Source Clock:      TXCLK rising
+
+  Data Path: nb_error_frame_0 to LED<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   0.744  nb_error_frame_0 (nb_error_frame_0)
+     OBUF:I->O                 2.571          LED_4_OBUF (LED<4>)
+    ----------------------------------------
+    Total                      3.762ns (3.018ns logic, 0.744ns route)
+                                       (80.2% logic, 19.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.389ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       RESETN (PAD)
+
+  Data Path: RST to RESETN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            90   1.222   1.811  RST_IBUF (RST_IBUF)
+     INV:I->O              1   0.206   0.579  _n04491_INV_0 (_n0449)
+     OBUF:I->O                 2.571          RESETN_OBUF (RESETN)
+    ----------------------------------------
+    Total                      6.389ns (3.999ns logic, 2.390ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock RXCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RXCLK          |    2.760|         |         |         |
+TXCLK          |    1.128|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock TXCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RXCLK          |    1.128|         |         |         |
+TXCLK          |    5.955|         |         |         |
+crc_clk        |    9.015|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock crc_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+TXCLK          |    2.597|         |         |         |
+crc_clk        |    2.909|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 26.82 secs
+ 
+--> 
+
+
+Total memory usage is 130804 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

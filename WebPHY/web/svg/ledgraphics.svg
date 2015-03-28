@@ -1,0 +1,55 @@
+<!-- ----------------------------------------------------------------------------- -->
+<!--                                                                               -->
+<!--   Title  : ledgraphics.svg                                                    -->
+<!--   COPYRIGHT (C) 2009 WebPHY                                                   -->
+<!--    _       __     __    ____  __  ____  __                                    -->
+<!--   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    -->
+<!--   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     -->
+<!--   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      -->
+<!--   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       -->
+<!--                                                                               -->
+<!--   All rights reserved.                                                        -->
+<!--                                                                               -->
+<!-- ----------------------------------------------------------------------------- -->
+
+<!-- SVG LED Graphics -->
+<svg>
+  <defs>
+    <linearGradient id="gradgry" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(150,150,150);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(50,50,50);stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradred" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(255,125,125);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(150,75,75);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradreddrk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(100,75,75);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(20,0,0);stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradgrn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(125,255,125);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,150,0);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradgrndrk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(50,100,50);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,50,0);stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="gradblu" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(128,128,255);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(50,50,100);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradbludrk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(10,10,75);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,0,12);stop-opacity:1" />
+    </linearGradient>
+    
+  </defs>
+    
+</svg>
+
+
+

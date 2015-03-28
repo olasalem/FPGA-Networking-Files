@@ -1,0 +1,3 @@
+PROCESSOR=microblaze
+REPOSITORIES=
+HWSPEC=../ZC702_hw_platform/system.xml

@@ -1,0 +1,121 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (lin)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.5/ISE_DS/ISE/bin/lin/unwrapped/trce -intstyle ise -v 3 -s 3 -n 3
+-fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf
+
+Design file:              hello_eth.ncd
+Physical constraint file: hello_eth.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock RXCLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    2.063(R)|      SLOW  |   -1.041(R)|      FAST  |RXCLK_BUFGP       |   0.000|
+RXD<0>      |    1.280(R)|      SLOW  |   -0.279(R)|      SLOW  |RXCLK_BUFGP       |   0.000|
+RXD<1>      |    1.282(R)|      SLOW  |   -0.281(R)|      SLOW  |RXCLK_BUFGP       |   0.000|
+RXD<2>      |    1.238(R)|      SLOW  |   -0.228(R)|      SLOW  |RXCLK_BUFGP       |   0.000|
+RXD<3>      |    1.676(R)|      SLOW  |   -0.653(R)|      SLOW  |RXCLK_BUFGP       |   0.000|
+RXDV        |    3.557(R)|      SLOW  |   -1.137(R)|      FAST  |RXCLK_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock TXCLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CRS         |    3.219(R)|      SLOW  |   -0.917(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<0>      |    5.838(R)|      SLOW  |   -1.678(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<1>      |    6.219(R)|      SLOW  |   -1.941(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<2>      |    5.336(R)|      SLOW  |   -1.273(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<3>      |    4.762(R)|      SLOW  |   -0.990(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<4>      |    5.400(R)|      SLOW  |   -1.553(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<5>      |    4.714(R)|      SLOW  |   -0.961(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<6>      |    4.675(R)|      SLOW  |   -0.907(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+NUM<7>      |    5.373(R)|      SLOW  |   -1.415(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+RST         |    6.171(R)|      SLOW  |   -0.926(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+RXDV        |    3.718(R)|      SLOW  |   -1.212(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock TXCLK to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>      |         8.398(R)|      SLOW  |         4.788(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<1>      |         8.061(R)|      SLOW  |         4.560(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<2>      |         8.268(R)|      SLOW  |         4.701(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<3>      |         8.170(R)|      SLOW  |         4.659(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<4>      |         7.996(R)|      SLOW  |         4.463(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<5>      |         8.002(R)|      SLOW  |         4.451(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<6>      |         7.656(R)|      SLOW  |         4.278(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+LED<7>      |         7.763(R)|      SLOW  |         4.342(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+TXD<0>      |         8.097(R)|      SLOW  |         4.540(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+TXD<1>      |         8.262(R)|      SLOW  |         4.626(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+TXD<2>      |         8.322(R)|      SLOW  |         4.661(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+TXD<3>      |         8.330(R)|      SLOW  |         4.671(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+TXEN        |         8.413(R)|      SLOW  |         4.700(R)|      FAST  |TXCLK_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock RXCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RXCLK          |    2.695|         |         |         |
+TXCLK          |    1.450|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock TXCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+RXCLK          |    1.507|         |         |         |
+TXCLK          |    4.632|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+RST            |RESETN         |   12.798|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 18 00:37:38 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 144 MB
+
+
+

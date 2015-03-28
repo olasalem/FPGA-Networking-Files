@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\Microblaze\Mblazetest.ncd
+OUTFILE=C:\Xilinx\Microblaze\Mblazetest.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Xilinx\Microblaze
+LICENSE=WebPack
+USER_INFO=210808522_0_0_071

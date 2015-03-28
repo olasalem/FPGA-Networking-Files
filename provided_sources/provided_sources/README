@@ -1,0 +1,6 @@
+This archive is made of 4 directory:
+-applications : contains just one python script that print udp packet from the board. (usage : python nanoServer.py)
+-ethlib: contains the necessary source files for the hello_eth project
+-ucf : contains just one ucf file necessary for the hello_eth project
+-hello_eth : contains a Xilinx ISE project (open hello_eth.xise ise software)
+-utils : contains a simple script loadFPGA to be used only at insa (to solve some install problem usage :loadFpga myimage.bit

@@ -1,0 +1,691 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ../../../../Modeltech_pe_edu_10.1a/randy_modelsim_work/ethernet_udp_blaster/syn/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to ../../../../Modeltech_pe_edu_10.1a/randy_modelsim_work/ethernet_udp_blaster/syn/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: s3_digilent.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "s3_digilent.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "s3_digilent"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : s3_digilent
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"../src"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/mem.vhd" in Library work.
+Architecture mem_arch of Entity mem is up to date.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/servo.vhd" in Library work.
+Architecture servo of Entity servo is up to date.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/hex_to_quad7seg.vhd" in Library work.
+Architecture hex_to_quad7seg of Entity hex_to_quad7seg is up to date.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/mydcm.vhd" in Library work.
+Architecture behavioral of Entity mydcm is up to date.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/webram.vhd" in Library work.
+Entity <webram> compiled.
+Entity <webram> (Architecture <webram_arch>) compiled.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/user_logic.vhd" in Library work.
+Architecture user_logic_arch of Entity user_logic is up to date.
+Compiling vhdl file "C:/FPGA/WebPHY/release/src/s3_digilent.vhd" in Library work.
+Architecture s3_digilent_arch of Entity s3_digilent is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <s3_digilent> in library <work> (architecture <s3_digilent_arch>).
+
+Analyzing hierarchy for entity <mydcm> in library <work> (architecture <BEHAVIORAL>) with generics.
+	CLKFX_DIVIDE = 5
+	CLKFX_MULTIPLY = 8
+
+Analyzing hierarchy for entity <webram> in library <work> (architecture <webram_arch>).
+
+Analyzing hierarchy for entity <user_logic> in library <work> (architecture <user_logic_arch>).
+
+Analyzing hierarchy for entity <mem> in library <work> (architecture <mem_arch>).
+
+Analyzing hierarchy for entity <servo> in library <work> (architecture <servo>).
+
+Analyzing hierarchy for entity <hex_to_quad7seg> in library <work> (architecture <hex_to_quad7seg>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <s3_digilent> in library <work> (Architecture <s3_digilent_arch>).
+WARNING:Xst:753 - "C:/FPGA/WebPHY/release/src/s3_digilent.vhd" line 138: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'mydcm'.
+WARNING:Xst:753 - "C:/FPGA/WebPHY/release/src/s3_digilent.vhd" line 138: Unconnected output port 'CLK0_OUT' of component 'mydcm'.
+WARNING:Xst:2211 - "C:/FPGA/WebPHY/release/src/s3_digilent.vhd" line 150: Instantiating black box module <WebPHY_DATABUS>.
+Entity <s3_digilent> analyzed. Unit <s3_digilent> generated.
+
+Analyzing generic Entity <mydcm> in library <work> (Architecture <BEHAVIORAL>).
+	CLKFX_DIVIDE = 5
+	CLKFX_MULTIPLY = 8
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <mydcm>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <mydcm>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <mydcm>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <mydcm>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLKFX_DIVIDE =  5" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  8" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "FACTORY_JF =  8080" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_INST> in unit <mydcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST> in unit <mydcm>.
+Entity <mydcm> analyzed. Unit <mydcm> generated.
+
+Analyzing Entity <webram> in library <work> (Architecture <webram_arch>).
+WARNING:Xst:790 - "C:/FPGA/WebPHY/release/src/webram.vhd" line 15959: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/FPGA/WebPHY/release/src/webram.vhd" line 15962: Index value(s) does not match array range, simulation mismatch.
+Entity <webram> analyzed. Unit <webram> generated.
+
+Analyzing Entity <user_logic> in library <work> (Architecture <user_logic_arch>).
+Entity <user_logic> analyzed. Unit <user_logic> generated.
+
+Analyzing Entity <mem> in library <work> (Architecture <mem_arch>).
+Entity <mem> analyzed. Unit <mem> generated.
+
+Analyzing Entity <servo> in library <work> (Architecture <servo>).
+Entity <servo> analyzed. Unit <servo> generated.
+
+Analyzing Entity <hex_to_quad7seg> in library <work> (Architecture <hex_to_quad7seg>).
+Entity <hex_to_quad7seg> analyzed. Unit <hex_to_quad7seg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <webram>.
+    Related source file is "C:/FPGA/WebPHY/release/src/webram.vhd".
+WARNING:Xst:647 - Input <rd_addr<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 15917x8-bit dual-port RAM <Mram_webpage_rom> for signal <webpage_rom>.
+    Found 8-bit register for signal <rd_dat>.
+    Found 16-bit register for signal <size_reg>.
+    Found 16-bit adder for signal <size_reg$add0000> created at line 15963.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <webram> synthesized.
+
+
+Synthesizing Unit <mem>.
+    Related source file is "C:/FPGA/WebPHY/release/src/mem.vhd".
+    Found 4096x8-bit single-port RAM <Mram_mem> for signal <mem>.
+    Found 8-bit register for signal <rd_dat>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <mem> synthesized.
+
+
+Synthesizing Unit <servo>.
+    Related source file is "C:/FPGA/WebPHY/release/src/servo.vhd".
+    Found 1-bit register for signal <pwm_out>.
+    Found 14-bit register for signal <cmd>.
+    Found 14-bit comparator greater for signal <pwm_out$cmp_gt0000> created at line 60.
+    Found 14-bit up counter for signal <pwm_ramp>.
+    Found 1-bit register for signal <timebase_975ns>.
+    Found 7-bit comparator less for signal <timebase_975ns$cmp_lt0000> created at line 42.
+    Found 7-bit up counter for signal <timebase_975ns_cnt>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <servo> synthesized.
+
+
+Synthesizing Unit <hex_to_quad7seg>.
+    Related source file is "C:/FPGA/WebPHY/release/src/hex_to_quad7seg.vhd".
+    Found 16x7-bit ROM for signal <seg7>.
+    Found 4-bit register for signal <anode>.
+    Found 1-of-4 decoder for signal <anode$mux0001> created at line 52.
+    Found 4-bit register for signal <hex>.
+    Found 4-bit 4-to-1 multiplexer for signal <hex$mux0001> created at line 52.
+    Found 14-bit up counter for signal <inccnt>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <hex_to_quad7seg> synthesized.
+
+
+Synthesizing Unit <mydcm>.
+    Related source file is "C:/FPGA/WebPHY/release/src/mydcm.vhd".
+Unit <mydcm> synthesized.
+
+
+Synthesizing Unit <user_logic>.
+    Related source file is "C:/FPGA/WebPHY/release/src/user_logic.vhd".
+WARNING:Xst:647 - Input <addr<31:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <rd_ack>.
+    Found 8-bit register for signal <leds>.
+    Found 8-bit register for signal <rd_dat>.
+    Found 8-bit register for signal <rd_dat_regs>.
+    Found 1-bit register for signal <rd_r1>.
+    Found 16-bit register for signal <servo_cmd>.
+    Found 8-bit register for signal <servo_cmd_hibyte>.
+    Found 8-bit up counter for signal <statcnt>.
+    Found 1-bit register for signal <statcnt_rst>.
+    Summary:
+	inferred   9 Counter(s).
+	inferred  51 D-type flip-flop(s).
+Unit <user_logic> synthesized.
+
+
+Synthesizing Unit <s3_digilent>.
+    Related source file is "C:/FPGA/WebPHY/release/src/s3_digilent.vhd".
+    Found 16-bit register for signal <rst_pipe>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <s3_digilent> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 15917x8-bit dual-port RAM                             : 1
+ 4096x8-bit single-port RAM                            : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 6
+ 14-bit up counter                                     : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 3
+# Registers                                            : 17
+ 1-bit register                                        : 5
+ 14-bit register                                       : 1
+ 16-bit register                                       : 3
+ 4-bit register                                        : 2
+ 8-bit register                                        : 6
+# Comparators                                          : 2
+ 14-bit comparator greater                             : 1
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../src/WebPHY_DATABUS.ngc>.
+Loading core <WebPHY_DATABUS> for timing and area information for instance <WebPHY_DATABUS_i>.
+INFO:Xst:2261 - The FF/Latch <cmd_11> in Unit <servo> is equivalent to the following 2 FFs/Latches, which will be removed : <cmd_12> <cmd_13> 
+WARNING:Xst:1710 - FF/Latch <cmd_10> (without init value) has a constant value of 1 in block <servo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cmd_11> (without init value) has a constant value of 0 in block <servo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <cmd<13:11>> (without init value) have a constant value of 0 in block <servo>.
+
+Synthesizing (advanced) Unit <hex_to_quad7seg>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg7> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <hex_to_quad7seg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <mem>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <rd_dat>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <wr_dat>        |          |
+    |     doA            | connected to signal <rd_dat>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <webram>.
+INFO:Xst:3226 - The RAM <Mram_webpage_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <rd_dat>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 15917-word x 8-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <wr_addr>       |          |
+    |     diA            | connected to signal <wr_dat>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 15917-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <rd>            | high     |
+    |     addrB          | connected to signal <rd_addr>       |          |
+    |     doB            | connected to signal <rd_dat>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <webram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 15917x8-bit dual-port block RAM                       : 1
+ 4096x8-bit single-port block RAM                      : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 6
+ 14-bit up counter                                     : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 3
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+# Comparators                                          : 2
+ 14-bit comparator greater                             : 1
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <cmd_10> (without init value) has a constant value of 1 in block <servo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance blk0000111b in unit blk0000111b of type RAMB16_S9_S9 has been replaced by RAMB16
+INFO:Xst:1901 - Instance blk0000111c in unit blk0000111c of type RAMB16_S9_S9 has been replaced by RAMB16
+
+Optimizing unit <s3_digilent> ...
+
+Optimizing unit <webram> ...
+
+Optimizing unit <servo> ...
+
+Optimizing unit <hex_to_quad7seg> ...
+
+Optimizing unit <user_logic> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block s3_digilent, actual ratio is 68.
+
+Final Macro Processing ...
+
+Processing Unit <s3_digilent> :
+	Found 2-bit shift register for signal <user_logic/rd_ack>.
+INFO:Xst:741 - HDL ADVISOR - A 16-bit shift register was found for signal <rst_pipe_0> and currently occupies 16 logic cells (8 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <s3_digilent> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 160
+ Flip-Flops                                            : 160
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : s3_digilent.ngr
+Top Level Output File Name         : s3_digilent
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 3412
+#      GND                         : 14
+#      INV                         : 125
+#      LUT1                        : 327
+#      LUT2                        : 382
+#      LUT2_D                      : 5
+#      LUT2_L                      : 4
+#      LUT3                        : 376
+#      LUT3_D                      : 10
+#      LUT3_L                      : 6
+#      LUT4                        : 738
+#      LUT4_D                      : 20
+#      LUT4_L                      : 28
+#      MUXCY                       : 671
+#      MUXF5                       : 121
+#      MUXF6                       : 33
+#      MUXF7                       : 16
+#      MUXF8                       : 8
+#      VCC                         : 2
+#      XORCY                       : 526
+# FlipFlops/Latches                : 1426
+#      FD                          : 68
+#      FDE                         : 837
+#      FDP                         : 16
+#      FDR                         : 133
+#      FDRE                        : 293
+#      FDRS                        : 1
+#      FDRSE                       : 10
+#      FDS                         : 19
+#      FDSE                        : 49
+# RAMS                             : 12
+#      RAMB16                      : 12
+# Shift Registers                  : 9
+#      SRL16                       : 1
+#      SRL16E                      : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 28
+#      IBUFDS                      : 1
+#      IBUFG                       : 1
+#      OBUF                        : 26
+# DCMs                             : 1
+#      DCM                         : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                     1308  out of   1920    68%  
+ Number of Slice Flip Flops:           1426  out of   3840    37%  
+ Number of 4 input LUTs:               2030  out of   3840    52%  
+    Number used as logic:              2021
+    Number used as Shift registers:       9
+ Number of IOs:                          29
+ Number of bonded IOBs:                  27  out of    173    15%  
+ Number of BRAMs:                        12  out of     12   100%  
+ Number of GCLKs:                         2  out of      8    25%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+osc_in                             | mydcm/DCM_INST:CLKFX   | 1447  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------+------------------------+-------+
+Control Signal                         | Buffer(FF name)        | Load  |
+---------------------------------------+------------------------+-------+
+locked_out_inv(locked_out_inv1_INV_0:O)| NONE(rst_pipe_0)       | 16    |
+---------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 19.924ns (Maximum Frequency: 50.191MHz)
+   Minimum input arrival time before clock: 1.901ns
+   Maximum output required time after clock: 9.121ns
+   Maximum combinational path delay: 7.342ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'osc_in'
+  Clock period: 19.924ns (frequency: 50.191MHz)
+  Total number of paths / destination ports: 94334 / 3404
+-------------------------------------------------------------------------
+Delay:               12.452ns (Levels of Logic = 17)
+  Source:            WebPHY_DATABUS_i/blk00000648 (FF)
+  Destination:       WebPHY_DATABUS_i/blk000006f2 (FF)
+  Source Clock:      osc_in rising 1.6X
+  Destination Clock: osc_in rising 1.6X
+
+  Data Path: WebPHY_DATABUS_i/blk00000648 to WebPHY_DATABUS_i/blk000006f2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            19   0.720   1.789  blk00000648 (sig00000ae2)
+     LUT2_D:I0->O          4   0.551   0.943  blk000010f5 (sig000008ce)
+     LUT4_D:I3->O         27   0.551   2.019  blk000010fc (sig000008c6)
+     LUT2:I1->O            0   0.551   0.000  blk00000d46 (sig00000a54)
+     MUXCY:DI->O           1   0.889   0.000  blk000006d2 (sig00000970)
+     MUXCY:CI->O           1   0.064   0.000  blk000006d0 (sig00000971)
+     MUXCY:CI->O           1   0.064   0.000  blk000006ce (sig00000972)
+     MUXCY:CI->O           1   0.064   0.000  blk000006cc (sig00000973)
+     MUXCY:CI->O           1   0.064   0.000  blk000006ca (sig00000964)
+     MUXCY:CI->O           1   0.064   0.000  blk000006c8 (sig00000965)
+     MUXCY:CI->O           1   0.064   0.000  blk000006c6 (sig00000966)
+     MUXCY:CI->O           1   0.064   0.000  blk000006c4 (sig00000967)
+     MUXCY:CI->O           1   0.064   0.000  blk000006c2 (sig00000968)
+     MUXCY:CI->O           1   0.064   0.000  blk000006c0 (sig00000969)
+     XORCY:CI->O           1   0.904   0.801  blk000006bd (sig00000a27)
+     INV:I->O              1   0.551   0.000  blk00000fde (sig000009f0)
+     MUXCY:S->O            0   0.500   0.000  blk00000654 (sig000009e0)
+     XORCY:CI->O           1   0.904   0.000  blk00000652 (sig00000a3b)
+     FDRE:D                    0.203          blk000006f2
+    ----------------------------------------
+    Total                     12.452ns (6.900ns logic, 5.552ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'osc_in'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.901ns (Levels of Logic = 2)
+  Source:            rx_p (PAD)
+  Destination:       WebPHY_DATABUS_i/blk000003c2 (FF)
+  Destination Clock: osc_in rising 1.6X
+
+  Data Path: rx_p to WebPHY_DATABUS_i/blk000003c2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'WebPHY_DATABUS_i'
+     IBUFDS:I->O           2   0.821   0.877  blk0000038b (status<7>)
+     FD:D                      0.203          blk000003c2
+    ----------------------------------------
+    Total                      1.901ns (1.024ns logic, 0.877ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'osc_in'
+  Total number of paths / destination ports: 48 / 25
+-------------------------------------------------------------------------
+Offset:              9.121ns (Levels of Logic = 2)
+  Source:            user_logic/hex_to_quad7seg/hex_1 (FF)
+  Destination:       seg7<6> (PAD)
+  Source Clock:      osc_in rising 1.6X
+
+  Data Path: user_logic/hex_to_quad7seg/hex_1 to seg7<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.720   1.405  user_logic/hex_to_quad7seg/hex_1 (user_logic/hex_to_quad7seg/hex_1)
+     LUT4:I0->O            1   0.551   0.801  user_logic/hex_to_quad7seg/Mrom_seg741 (seg7_4_OBUF)
+     OBUF:I->O                 5.644          seg7_4_OBUF (seg7<4>)
+    ----------------------------------------
+    Total                      9.121ns (6.915ns logic, 2.206ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               7.342ns (Levels of Logic = 3)
+  Source:            rx_p (PAD)
+  Destination:       rx_tst (PAD)
+
+  Data Path: rx_p to rx_tst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'WebPHY_DATABUS_i'
+     IBUFDS:I->O           2   0.821   0.877  blk0000038b (status<7>)
+     end scope: 'WebPHY_DATABUS_i'
+     OBUF:I->O                 5.644          rx_tst_OBUF (rx_tst)
+    ----------------------------------------
+    Total                      7.342ns (6.465ns logic, 0.877ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 24.36 secs
+ 
+--> 
+
+Total memory usage is 337596 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

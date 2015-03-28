@@ -1,0 +1,20 @@
+/*
+ * Empty C++ Application
+ */
+#include <stdio.h>
+//#include "platform.h"
+#include "xparameters.h"
+#include "xiomodule.h"
+int main()
+{
+	//init_platform();
+	u32 data;
+	XIOModule gpi;
+	XIOModule gpo;
+
+	data = XIOModule_Initialize(&gpi, XPAR_IOMODULE_0_DEVICE_ID);
+	data = XIOModule_Start(&gpi);
+
+	//print("Hello World!!");
+	return 0;
+}

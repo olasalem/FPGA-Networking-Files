@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/dcarvin/provided_sources/hello_eth/hello_eth.ncd
+OUTFILE=/home/dcarvin/provided_sources/hello_eth/hello_eth.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/dcarvin/provided_sources/hello_eth
+LICENSE=WebPack
+USER_INFO=204101235_0_0_830

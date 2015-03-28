@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/microblazeproc.v"
+verilog work "msc_top.v"

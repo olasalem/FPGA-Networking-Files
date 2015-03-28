@@ -1,0 +1,9 @@
+[Inputs]
+clk
+rst
+en
+is_msb
+=data_in[7:0]=
+[Outputs]
+=crc_out[31:0]=
+[BiDir]

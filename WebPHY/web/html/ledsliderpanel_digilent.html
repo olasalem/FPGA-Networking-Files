@@ -1,0 +1,71 @@
+<!-- ----------------------------------------------------------------------------- -->
+<!--                                                                               -->
+<!--   Title  : ledsliderpanel.html                                                  -->
+<!--   COPYRIGHT (C) 2009 WebPHY                                                   -->
+<!--    _       __     __    ____  __  ____  __                                    -->
+<!--   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    -->
+<!--   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     -->
+<!--   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      -->
+<!--   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       -->
+<!--                                                                               -->
+<!--    All rights reserved.                                                       -->
+<!--                                                                               -->
+<!-- ----------------------------------------------------------------------------- -->
+
+// This is an LED panel.  Each LED is both an indicator and a toggle button.
+// The overal width of the panel is set by the div's width (e.g. 384).
+// (margin + width + margin) of each LED+label times the number per row must = the total div width.
+// Example : if div width = 384 with 8 LEDs/row and margin = 2, each LED+label width = 44, each LED cx = 22.
+
+<style>.ol_ledcss{ 
+  <!-- spacing between columns -->
+  float:left; margin:2; width:40; font-size:10;
+  <!-- center labels -->
+  text-align:center; 
+  <!-- silver rim of LEDs -->
+  stroke-width:2; stroke:url(#gradgry);
+}</style>
+<style>
+  #slider0 .ui-slider-range {  
+    background:#555555;
+    box-shadow: inset 0px 10px 15px 0px #000000;
+  }
+  #slider1 .ui-slider-range {  
+    background:#555555;
+    box-shadow: inset 0px 10px 15px 0px #000000;
+  }
+ </style>
+
+<html>
+<div id="divledsliderpanel1" class="shadbox"  style="padding:10px 65px 10px 15px;" 
+  title="ledsliderpanel_digilent.html/.js - example panel controlling LEDs on Digilent S3 board,">
+  <!-- <font size=1 class="std">Control Panel</font><BR> -->
+  <div style="margin-top: 0; text-align: justify;width: 20em;">
+    <form class="st-slider" style="font-size : 15;margin-left: 40;" id="slider0" title="Command servo (slide-stop)."></form>
+    <form class="st-slider" style="font-size : 15;margin-left: 40;" id="slider1" title="Command servo (realtime)."></form>
+  </div>
+  <div  style="text-align: justify;width: 384;">
+     <div style="margin-top: 10;">
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_20" onclick=cmdtglled('0x10','0x80',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_21" onclick=cmdtglled('0x10','0x40',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_22" onclick=cmdtglled('0x10','0x20',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_23" onclick=cmdtglled('0x10','0x10',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_24" onclick=cmdtglled('0x10','0x08',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_25" onclick=cmdtglled('0x10','0x04',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_26" onclick=cmdtglled('0x10','0x02',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <svg width="20" height="20" class="ol_ledcss"><circle id="ol_led_27" onclick=cmdtglled('0x10','0x01',this.id,'url(#gradred)','url(#gradreddrk)') fill="url(#gradreddrk)" r="8" cy="10" cx="22"></svg>
+        <BR>
+        <label class="ol_ledcss">ds0</label>
+        <label class="ol_ledcss">ds1</label>
+        <label class="ol_ledcss">ds2</label>
+        <label class="ol_ledcss">ds3</label>
+        <label class="ol_ledcss">ds4</label>
+        <label class="ol_ledcss">ds5</label>
+        <label class="ol_ledcss">ds6</label>
+        <label class="ol_ledcss">ds7</label>
+        <BR>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

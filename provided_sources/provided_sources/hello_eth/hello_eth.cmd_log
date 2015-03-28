@@ -1,0 +1,77 @@
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+vhdtdtfi -prj hello_eth -o /home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.vhi -module hello_eth -template /opt/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/fifo_core.vhd -lib work ../ethlib/MAC2PHY4IR.vhd -lib work ../ethlib/eth_frame.vhd -lib work ../ethlib/ethcrc32.vhd -lib work ../ethlib/hello_eth.vhd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/BETEL/BE_mac/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.syr" 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ethlib/ipcore_dir -nt timestamp -uc /home/dcarvin/Bureau/VHDL_4IR/BE_mac4IR-RT/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/BE_mac4IR-RT/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/BE_mac4IR-RT/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ethlib/ipcore_dir -nt timestamp -uc /home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/BE_mac4IR-RT/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/provided_sources/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/provided_sources/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ethlib/ipcore_dir -nt timestamp -uc /home/dcarvin/Documents/Enseignement/2013_2014/4RTVHDL/BE/provided_sources/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 
+xst -intstyle ise -ifn "/home/dcarvin/provided_sources/hello_eth/hello_eth.xst" -ofn "/home/dcarvin/provided_sources/hello_eth/hello_eth.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ethlib/ipcore_dir -nt timestamp -uc /home/dcarvin/provided_sources/ucf/hello_eth.ucf -p xc6slx16-csg324-3 hello_eth.ngc hello_eth.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o hello_eth_map.ncd hello_eth.ngd hello_eth.pcf 
+par -w -intstyle ise -ol high -mt off hello_eth_map.ncd hello_eth.ncd hello_eth.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml hello_eth.twx hello_eth.ncd -o hello_eth.twr hello_eth.pcf 
+bitgen -intstyle ise -f hello_eth.ut hello_eth.ncd 

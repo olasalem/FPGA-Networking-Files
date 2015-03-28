@@ -1,0 +1,33 @@
+/* ----------------------------------------------------------------------------- */
+/*                                                                               */
+/*   Title  : sliderpanel.css                                                    */
+/*   COPYRIGHT (C) 2009 WebPHY                                                   */
+/*    _       __     __    ____  __  ____  __                                    */
+/*   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    */
+/*   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     */
+/*   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      */
+/*   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       */
+/*                                                                               */
+/*   All rights reserved.                                                        */
+/*                                                                               */
+/* ----------------------------------------------------------------------------- */
+<style>
+  #slider0 .ui-slider-range { background: red; }
+  #slider0 .ui-slider-handle { border-color: red; }
+  #slider1 .ui-slider-range { background: orange; }
+  #slider1 .ui-slider-handle { border-color: orange; }
+  #slider2 .ui-slider-range { background: yellow; }
+  #slider2 .ui-slider-handle { border-color: yellow; }
+  #slider3 .ui-slider-range { background: green; }
+  #slider3 .ui-slider-handle { border-color: green; }
+  #slider4 .ui-slider-range { background: blue; }
+  #slider4 .ui-slider-handle { border-color: blue; }
+  #slider5 .ui-slider-range { background: #af00ff; }
+  #slider5 .ui-slider-handle { border-color: #af00ff; }
+  #slider6 .ui-slider-range { background: red; }
+  #slider6 .ui-slider-handle { border-color: red; }
+  #slider7 .ui-slider-range { background: blue; }
+  #slider7 .ui-slider-handle { border-color: blue; }
+  
+</style>
+ 

@@ -1,0 +1,14 @@
+
+**** Build of configuration Default for project hello_world1 ****
+
+make all 
+g++ -O2 -g -Wall -fmessage-length=0   -c -o hello_world1.o hello_world1.cpp
+g++ -o hello_world1.exe hello_world1.o 
+c:/xilinx/14.2/ise_ds/edk/gnu/microblaze/nt64/bin/../lib/gcc/microblaze-xilinx-elf/4.6.2/../../../../microblaze-xilinx-elf/lib\libxil.a(write.o): In function `write':
+/gnu/mb_gnu/src/newlib/libgloss/microblaze/write.c:36: undefined reference to `outbyte'
+/gnu/mb_gnu/src/newlib/libgloss/microblaze/write.c:34: undefined reference to `outbyte'
+/gnu/mb_gnu/src/newlib/libgloss/microblaze/write.c:36: undefined reference to `outbyte'
+c:/xilinx/14.2/ise_ds/edk/gnu/microblaze/nt64/bin/../lib/gcc/microblaze-xilinx-elf/4.6.2/../../../../microblaze-xilinx-elf/lib\libxil.a(read.o): In function `read':
+/gnu/mb_gnu/src/newlib/libgloss/microblaze/read.c:35: undefined reference to `inbyte'
+collect2: ld returned 1 exit status
+make: *** [hello_world1.exe] Error 1

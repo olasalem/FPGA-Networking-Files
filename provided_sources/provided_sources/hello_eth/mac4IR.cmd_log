@@ -1,0 +1,5 @@
+vhdtdtfi -lib work ../ethlib/MAC4IR.vhd -prj hello_eth -o mac4IR.spl -module mac4IR -template /opt/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work ../ethlib/MAC4IR.vhd -prj hello_eth -o mac4IR.spl -module mac4IR -template /opt/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 mac4IR.spl /home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/mac4IR.sym 
+vhdtdtfi -prj hello_eth -o /home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/mac4IR.vhi -module mac4IR -template /opt/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../ethlib/MAC4IR.vhd 
+xst -intstyle ise -ifn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/mac4IR.xst" -ofn "/home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/mac4IR.syr" 

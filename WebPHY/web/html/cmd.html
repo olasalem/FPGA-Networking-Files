@@ -1,0 +1,26 @@
+<!-- ----------------------------------------------------------------------------- -->
+<!--                                                                               -->
+<!--   Title  : cmd.html                                                  -->
+<!--   COPYRIGHT (C) 2009 WebPHY                                                   -->
+<!--    _       __     __    ____  __  ____  __                                    -->
+<!--   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    -->
+<!--   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     -->
+<!--   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      -->
+<!--   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       -->
+<!--                                                                               -->
+<!-- ----------------------------------------------------------------------------- -->
+<!-- Invisible layer over whole page prevents user entry while cmd is in progress -->
+<div id="disablingDiv" ></div>
+<div id="divledsliderpanel1" title="cmd.html/.js - command line interface with up/down arrow history." class="shadbox" style="padding:20px 40px; ">
+  <!-- Command history textbox -->
+  <textarea  title="This is a history of all data sent to and from the FPGA."rows="7" class="shadboxraised wc" id="t2" style="border:1px solid #707070;font-family: 'Courier';font-size: 10pt;font-style: italic;color: #00bb00;background-color: #111111"/>&lt;view history here&gt;</textarea>
+  <BR>
+  <!-- Command line textbox -->
+  <input
+  class="shadboxraised wc"
+  title="All rd and wr commands are sent to the FPGA via HTTP POST messages through this textbox, either by directly typing them or from user-customized GUI elements.  For example, 'wr 0x1010 0xFEEDBEEFF00DCAFE' writes 0xFEEDBEEFF00DCAFE to address 0x1010 and 'rd 0x100 0x8' reads 8 bytes from address 0x1010.  Multiple wr commands can be combined into a single POST, for example 'wr 0x0 0x05 wr 0x1000 0x12345678 wr 0x87654321 0x123456'.  All successful commands are added to the command history.  You can use up+down arrow keys to traverse the command history and re-execute old commands." value="&lt;enter rd and wr commands here&gt;" name="cmdline" onkeyup="cmdline_keypress(event);" type="text" id="t1" style="border:1px solid #707070;height:22px;font-family: 'Courier';font-size: 10pt;color: #00ff00;background-color: #000000"/>
+  <!-- Progress Bar -->
+  <!-- <div class="center-justified" style="font-size : 7;" id="progressbar"></div> -->
+  <div id="progressbar"><div class="progress-label"></div></div>
+</div>
+</form>

@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project helloWorld ****
+
+make all 
+Building file: ../src/main.cc
+Invoking: MicroBlaze g++ compiler
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../standalone_bsp_3/microblaze/include -mno-xl-reorder -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o"src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+' '
+Building target: helloWorld.elf
+Invoking: MicroBlaze g++ linker
+mb-g++ -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_3/microblaze/lib -mlittle-endian -mcpu=v8.40.a -mxl-soft-mul -o"helloWorld.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: helloWorld.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size helloWorld.elf  |tee "helloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13170	    440	   2134	  15744	   3d80	helloWorld.elf
+Finished building: helloWorld.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck helloWorld.elf -hw ../../hw_platfrom_0/system.xml -pe microblaze  |tee "helloWorld.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../hw_platfrom_0/system.xml -pe microblaze
+helloWorld.elf 
+
+ELF file	: helloWorld.elf
+elfcheck passed.
+Finished building: helloWorld.elf.elfcheck
+' '

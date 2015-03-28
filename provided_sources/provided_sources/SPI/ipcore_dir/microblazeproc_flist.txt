@@ -1,0 +1,18 @@
+# Output products list for <microblazeproc>
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
+microblazeproc.asy
+microblazeproc.bmm
+microblazeproc.gise
+microblazeproc.ngc
+microblazeproc.sym
+microblazeproc.v
+microblazeproc.veo
+microblazeproc.xco
+microblazeproc.xise
+microblazeproc\mb_bootloop_le.elf
+microblazeproc\microblaze_mcs_setup.tcl
+microblazeproc\system_template.tcl
+microblazeproc_flist.txt
+microblazeproc_readme.txt
+microblazeproc_sdk.xml

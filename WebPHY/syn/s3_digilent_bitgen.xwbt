@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\WebPHY\release\syn\s3_digilent.ncd
+OUTFILE=C:\FPGA\WebPHY\release\syn\s3_digilent.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=C:\FPGA\WebPHY\release\syn
+LICENSE=WebPack
+USER_INFO=210729791_0_0_750

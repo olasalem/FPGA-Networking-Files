@@ -1,0 +1,70 @@
+/* ----------------------------------------------------------------------------- */
+/*                                                                               */
+/*   Title  : theme.css                                                          */
+/*   COPYRIGHT (C) 2009 WebPHY                                                   */
+/*    _       __     __    ____  __  ____  __                                    */
+/*   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    */
+/*   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     */
+/*   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      */
+/*   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       */
+/*                                                                               */
+/*   All rights reserved.                                                        */
+/*                                                                               */
+/* ----------------------------------------------------------------------------- */
+
+<html>
+  <style>.wc{width:300;}</style>
+  <style>.bc{height:3em;width:8em;font-size:15px;font-family: verdana,arial,helvetica;}</style>
+  <style>.bcbig {height:2em;width:8em;font-size:15px;font-family: verdana,arial,helvetica;}</style>
+  <style>.bcsml {height:2em;width:85px;font-size:15px;font-family: verdana,arial,helvetica;}</style>
+
+  <!-- Set shaded background gradients -->
+  <style>.shdbkgnd{
+    background: #102b32; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #102b32 0%, #13333b 12%, #163b44 25%, #0f282f 39%, #09191d 50%, #000000 51%, #03090b 60%, #09191d 76%, #061012 91%, #040a0c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#102b32), color-stop(12%,#13333b), color-stop(25%,#163b44), color-stop(39%,#0f282f), color-stop(50%,#09191d), color-stop(51%,#000000), color-stop(60%,#03090b), color-stop(76%,#09191d), color-stop(91%,#061012), color-stop(100%,#040a0c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #102b32 0%,#13333b 12%,#163b44 25%,#0f282f 39%,#09191d 50%,#000000 51%,#03090b 60%,#09191d 76%,#061012 91%,#040a0c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #102b32 0%,#13333b 12%,#163b44 25%,#0f282f 39%,#09191d 50%,#000000 51%,#03090b 60%,#09191d 76%,#061012 91%,#040a0c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #102b32 0%,#13333b 12%,#163b44 25%,#0f282f 39%,#09191d 50%,#000000 51%,#03090b 60%,#09191d 76%,#061012 91%,#040a0c 100%); /* IE10+ */
+    background: linear-gradient(135deg, #102b32 0%,#13333b 12%,#163b44 25%,#0f282f 39%,#09191d 50%,#000000 51%,#03090b 60%,#09191d 76%,#061012 91%,#040a0c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#102b32', endColorstr='#040a0c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }</style>
+
+  <style>.std{font-size:15px;font-family: verdana,arial,helvetica;color: #ffffff;}</style>
+  <style>.titl{font-family: verdana,arial,helvetica;color: #ffffff;}</style>
+  <style>.center-justified {
+    text-align: justify;
+    margin: 0 auto;
+    width: 24em;
+  }</style>
+
+  <style>.left-justified {
+    text-align: left;
+    margin-left:80px;
+    width: 22em;
+  }</style>
+  
+  <style>.shadraised {
+    opacity:1.0;
+    box-shadow: 0px 0px 5px 2px #181818;
+  }</style>
+  
+  <style>.shadboxraised {
+    opacity:1.0;
+    box-shadow: 0px 2px 10px 0px #000000;
+    border-radius:5px;
+  }</style>
+
+  <style>.shadbox {
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#222222;
+    opacity:1.0;
+    box-shadow: inset 0px 2px 15px 0px #000000;
+    width:300;
+    border-radius:25px;
+  }</style>
+  
+</html>
+
+

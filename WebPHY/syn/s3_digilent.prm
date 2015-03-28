@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -u 0 s3_digilent.bit -o s3_digilent.mcs -x xcf04s 
+
+PROM s3_digilent.prm map: Sat Aug 02 09:11:25 2014
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 06430cdf
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0001:ff87     Aug 02 09:11:13 2014 s3_digilent.bit

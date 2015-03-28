@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="mac4IR">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-5-29T8:41:52</timestamp>
+    <pin polarity="Output" x="448" y="-864" name="TSTARTP" />
+    <pin polarity="Input" x="0" y="-864" name="TDATAI(7:0)" />
+    <pin polarity="Input" x="0" y="-832" name="TAVAILP" />
+    <pin polarity="Input" x="0" y="-800" name="TLASTP" />
+    <pin polarity="Input" x="0" y="-768" name="TFINISHP" />
+    <pin polarity="Input" x="0" y="-736" name="TABORTP" />
+    <pin polarity="Output" x="448" y="-832" name="TRNSMTP" />
+    <pin polarity="Output" x="448" y="-800" name="TREADP" />
+    <pin polarity="Output" x="448" y="-768" name="TDONEP" />
+    <pin polarity="Output" x="448" y="-736" name="TSOCOLP" />
+    <pin polarity="Input" x="0" y="-672" name="RENABP" />
+    <pin polarity="Output" x="448" y="-672" name="RSTARTP" />
+    <pin polarity="Output" x="448" y="-640" name="RCVNGP" />
+    <pin polarity="Output" x="448" y="-608" name="RSMATIP" />
+    <pin polarity="Output" x="448" y="-576" name="RBYTEP" />
+    <pin polarity="Output" x="448" y="-544" name="RDONEP" />
+    <pin polarity="Output" x="448" y="-512" name="RCLEANP" />
+    <pin polarity="Output" x="448" y="-480" name="RDATAO(7:0)" />
+    <pin polarity="Output" x="448" y="-400" name="TXVALID" />
+    <pin polarity="Output" x="448" y="-368" name="TDATAO(7:0)" />
+    <pin polarity="Input" x="0" y="-368" name="RDATAI(7:0)" />
+    <pin polarity="Input" x="0" y="-400" name="RXVALID" />
+    <pin polarity="Input" x="0" y="-320" name="COLLISION" />
+    <pin polarity="Input" x="0" y="-288" name="CARRIER" />
+    <pin polarity="Input" x="144" y="-176" name="RSTN" />
+    <pin polarity="Input" x="288" y="-176" name="CLK25" />
+    <pin polarity="Input" x="224" y="-992" name="NOADDR(47:0)" />
+    <graph>
+        <rect width="320" x="64" y="-940" height="732" />
+        <line x2="448" y1="-864" y2="-864" x1="384" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-864" type="pin TDATAI(7:0)" />
+        <rect width="64" x="0" y="-876" height="24" />
+        <line x2="0" y1="-864" y2="-864" x1="64" />
+        <line x2="0" y1="-832" y2="-832" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-832" type="pin TAVAILP" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin TLASTP" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-768" type="pin TFINISHP" />
+        <line x2="0" y1="-768" y2="-768" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-736" type="pin TABORTP" />
+        <line x2="0" y1="-736" y2="-736" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-832" type="pin TRNSMTP" />
+        <line x2="448" y1="-832" y2="-832" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-800" type="pin TREADP" />
+        <line x2="448" y1="-800" y2="-800" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-768" type="pin TDONEP" />
+        <line x2="448" y1="-768" y2="-768" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-736" type="pin TSOCOLP" />
+        <line x2="448" y1="-736" y2="-736" x1="384" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin RENABP" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-672" type="pin RSTARTP" />
+        <line x2="448" y1="-672" y2="-672" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-640" type="pin RCVNGP" />
+        <line x2="448" y1="-640" y2="-640" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-608" type="pin RSMATIP" />
+        <line x2="448" y1="-608" y2="-608" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-576" type="pin RBYTEP" />
+        <line x2="448" y1="-576" y2="-576" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-544" type="pin RDONEP" />
+        <line x2="448" y1="-544" y2="-544" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-512" type="pin RCLEANP" />
+        <line x2="448" y1="-512" y2="-512" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-480" type="pin RDATAO(7:0)" />
+        <rect width="64" x="384" y="-492" height="24" />
+        <line x2="448" y1="-480" y2="-480" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-400" type="pin TXVALID" />
+        <line x2="448" y1="-400" y2="-400" x1="384" />
+        <rect width="64" x="384" y="-380" height="24" />
+        <line x2="448" y1="-368" y2="-368" x1="384" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-368" type="pin TDATAO(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-368" type="pin RDATAI(7:0)" />
+        <rect width="64" x="0" y="-380" height="24" />
+        <line x2="0" y1="-368" y2="-368" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-400" type="pin RXVALID" />
+        <line x2="0" y1="-400" y2="-400" x1="64" />
+        <line x2="0" y1="-320" y2="-320" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-320" type="pin COLLISION" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin CARRIER" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-864" type="pin TSTARTP" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="152" y="-916" type="pin NOADDR(47:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="116" y="-224" type="pin RSTN" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="252" y="-224" type="pin CLK25" />
+        <line x2="288" y1="-172" y2="-208" x1="288" />
+        <line x2="144" y1="-208" y2="-176" x1="144" />
+        <rect width="20" x="212" y="-992" height="52" />
+        <line x2="224" y1="-940" y2="-992" x1="224" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="224" y="-1028" type="symbol" />
+    </graph>
+</symbol>

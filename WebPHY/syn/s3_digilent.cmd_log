@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/FPGA/WebPHY/release/syn/s3_digilent.xst" -ofn "C:/FPGA/WebPHY/release/syn/s3_digilent.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../src -nt timestamp -uc C:/FPGA/WebPHY/release/src/s3_digilent.ucf -p xc3s200-ft256-4 s3_digilent.ngc s3_digilent.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o s3_digilent_map.ncd s3_digilent.ngd s3_digilent.pcf 
+par -w -intstyle ise -ol high -t 1 s3_digilent_map.ncd s3_digilent.ncd s3_digilent.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml s3_digilent.twx s3_digilent.ncd -o s3_digilent.twr s3_digilent.pcf 
+bitgen -intstyle ise -f s3_digilent.ut s3_digilent.ncd 

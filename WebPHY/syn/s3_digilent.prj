@@ -1,0 +1,7 @@
+vhdl work "../src/servo.vhd"
+vhdl work "../src/mem.vhd"
+vhdl work "../src/hex_to_quad7seg.vhd"
+vhdl work "../src/webram.vhd"
+vhdl work "../src/user_logic.vhd"
+vhdl work "../src/mydcm.vhd"
+vhdl work "../src/s3_digilent.vhd"

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work ../ethlib/ethcrc32.vhd -prj hello_eth -o ethcrc32.spl -module ethcrc32 -template /opt/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 ethcrc32.spl /home/dcarvin/Bureau/BETEL/BE_mac/hello_eth/ethcrc32.sym 

@@ -1,0 +1,28 @@
+xst -intstyle ise -ifn "C:/Xilinx/Microblaze/Mblazetest.xst" -ofn "C:/Xilinx/Microblaze/Mblazetest.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 Mblazetest.ngc Mblazetest.ngd -bm "ipcore_dir/microblaze.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Mblazetest_map.ncd Mblazetest.ngd Mblazetest.pcf 
+par -w -intstyle ise -ol high -mt off Mblazetest_map.ncd Mblazetest.ncd Mblazetest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Mblazetest.twx Mblazetest.ncd -o Mblazetest.twr Mblazetest.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 Mblazetest.ngc Mblazetest.ngd -bm "ipcore_dir/microblaze.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Mblazetest_map.ncd Mblazetest.ngd Mblazetest.pcf 
+par -w -intstyle ise -ol high -mt off Mblazetest_map.ncd Mblazetest.ncd Mblazetest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Mblazetest.twx Mblazetest.ncd -o Mblazetest.twr Mblazetest.pcf 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+xst -intstyle ise -ifn "C:/Xilinx/Microblaze/Mblazetest.xst" -ofn "C:/Xilinx/Microblaze/Mblazetest.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MBlazeUcf.ucf -p xc6slx16-csg324-3 Mblazetest.ngc Mblazetest.ngd -bm "ipcore_dir/microblaze.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Mblazetest_map.ncd Mblazetest.ngd Mblazetest.pcf 
+par -w -intstyle ise -ol high -mt off Mblazetest_map.ncd Mblazetest.ncd Mblazetest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Mblazetest.twx Mblazetest.ncd -o Mblazetest.twr Mblazetest.pcf -ucf MBlazeUcf.ucf 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MBlazeUcf.ucf -p xc6slx16-csg324-3 Mblazetest.ngc Mblazetest.ngd -bm "ipcore_dir/microblaze.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Mblazetest_map.ncd Mblazetest.ngd Mblazetest.pcf 
+par -w -intstyle ise -ol high -mt off Mblazetest_map.ncd Mblazetest.ncd Mblazetest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Mblazetest.twx Mblazetest.ncd -o Mblazetest.twr Mblazetest.pcf -ucf MBlazeUcf.ucf 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 
+bitgen -intstyle ise -f Mblazetest.ut Mblazetest.ncd 

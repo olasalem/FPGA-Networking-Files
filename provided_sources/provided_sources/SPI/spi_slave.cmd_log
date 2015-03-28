@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/spi_slave.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/spi_slave.syr" 
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/spi_slave.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/spi_slave.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "spi_slave.ngc" spi_slave.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_slave_map.ncd spi_slave.ngd spi_slave.pcf 

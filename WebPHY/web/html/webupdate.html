@@ -1,0 +1,27 @@
+<!-- ----------------------------------------------------------------------------- -->
+<!--                                                                               -->
+<!--   Title  : webupdate.html                                                     -->
+<!--   COPYRIGHT (C) 2009 WebPHY                                                   -->
+<!--    _       __     __    ____  __  ____  __                                    -->
+<!--   | |     / /__  / /_  / __ \/ / / /\_\/_/                                    -->
+<!--   | | /| / / _ \/ __ \/ /_/ / /_/ /  \__/                                     -->
+<!--   | |/ |/ /  __/ /_/ / ____/ __  /   / /                                      -->
+<!--   |__/|__/\___/_.___/_/   /_/ /_/   /_/                                       -->
+<!--                                                                               -->
+<!--    All rights reserved.                                                       -->
+<!--                                                                               -->
+<!-- ----------------------------------------------------------------------------- -->
+<!-- Upload the file pointed to by webupld "browse" dialog -->
+
+<html>
+
+<div class="shadbox" style="margin-top: 0"; padding:20px 40px;>
+<!-- <font size=1 class="std">Upload WebPage Image</font><BR> -->
+<input title="webupdate.html/.js - this controls the Instant Update feature of the core.  The user processes their HTML/Javascript files through the included romgen.pl script which generates the Instant Update file.  Navigate to /out/webupdate.txt using this dialog and click the 'Upload' button to update the core's web page."; id="webupld" type="file" char>
+<button id="btnupld" onclick=DoWebUpdate() title="Send the Instant Update file to the FPGA and refresh the web page to reload it.";>Upload</button>
+<BR>
+</div>
+<BR>
+</html>
+
+

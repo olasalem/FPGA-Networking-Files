@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="bootloop" key="hw_platfrom_0-microblaze-initElf"/>
+	<item value="C:\Xilinx\Microblaze\mblazetest.bit" key="hw_platfrom_0-bitFile"/>
+	<item value="C:\Xilinx\Microblaze\Workshop\hw_platfrom_0\system_bd.bmm" key="hw_platfrom_0-bmmFile"/>
+</section>

@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.syr" 
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.syr" 
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.syr" 
+xst -intstyle ise -ifn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.xst" -ofn "D:/study/Fall 14/Digital/Project2/provided_sources/provided_sources/SPI/msc_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 "msc_top.ngc" msc_top.ngd -bm "ipcore_dir/microblazeproc.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o msc_top_map.ncd msc_top.ngd msc_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 "msc_top.ngc" msc_top.ngd -bm "ipcore_dir/microblazeproc.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o msc_top_map.ncd msc_top.ngd msc_top.pcf 

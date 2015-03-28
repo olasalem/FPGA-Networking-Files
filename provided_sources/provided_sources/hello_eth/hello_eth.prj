@@ -1,0 +1,5 @@
+vhdl work "../ethlib/ipcore_dir/fifo_core.vhd"
+vhdl work "../ethlib/MAC2PHY4IR.vhd"
+vhdl work "../ethlib/ethcrc32.vhd"
+vhdl work "../ethlib/bemac4RT.vhd"
+vhdl work "../ethlib/hello_eth.vhd"

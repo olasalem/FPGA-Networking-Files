@@ -1,0 +1,3 @@
+#!/bin/bash
+export LD_LIBRARY_PATH=/home/commetud/3eme\ Annee\ MIC/ProjetSFO/amd64
+/home/commetud/3eme\ Annee\ MIC/ProjetSFO/djtgcfg prog -d Nexys3 --index 0 --file $1

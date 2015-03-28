@@ -1,0 +1,7 @@
+vhdl work "C:\FPGA\WebPHY\release\src\servo.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\mem.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\hex_to_quad7seg.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\webram.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\user_logic.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\mydcm.vhd"
+vhdl work "C:\FPGA\WebPHY\release\src\s3_digilent.vhd"

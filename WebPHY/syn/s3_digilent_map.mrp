@@ -1,0 +1,620 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 's3_digilent'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off
+-c 100 -o s3_digilent_map.ncd s3_digilent.ngd s3_digilent.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Sat Aug 02 09:10:16 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:         1,382 out of   3,840   35%
+  Number of 4 input LUTs:             1,592 out of   3,840   41%
+Logic Distribution:
+  Number of occupied Slices:          1,443 out of   1,920   75%
+    Number of Slices containing only related logic:   1,443 out of   1,443 100%
+    Number of Slices containing unrelated logic:          0 out of   1,443   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,906 out of   3,840   49%
+    Number used as logic:             1,584
+    Number used as a route-thru:        314
+    Number used as Shift registers:       8
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 29 out of     173   16%
+    IOB Master Pads:                      1
+    IOB Slave Pads:                       1
+  Number of RAMB16s:                     10 out of      12   83%
+  Number of BUFGMUXs:                     2 out of       8   25%
+  Number of DCMs:                         1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                3.12
+
+Peak Memory Usage:  254 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network user_logic/rd_ack has no load.
+INFO:LIT:395 - The above info message is repeated 9 more times for the following
+   (max. 5 shown):
+   user_logic/rd_dat<0>,
+   user_logic/rd_dat<1>,
+   user_logic/rd_dat<2>,
+   user_logic/rd_dat<3>,
+   user_logic/rd_dat<4>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp mydcm/DCM_INST, consult
+   the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 149 block(s) removed
+  30 block(s) optimized away
+ 155 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "user_logic/Mshreg_rd_ack/CE" is sourceless and has been removed.
+The signal "WebPHY_DATABUS_i/WebPHY/receiver/tcp_pkt_rx" is sourceless and has
+been removed.
+The signal "WebPHY_DATABUS_i/sig000006e6" is sourceless and has been removed.
+ Sourceless block "WebPHY_DATABUS_i/blk0000009b" (FF) removed.
+The signal "WebPHY_DATABUS_i/sig000006c4" is sourceless and has been removed.
+ Sourceless block "WebPHY_DATABUS_i/blk000000d1" (FF) removed.
+  The signal "status<4>" is sourceless and has been removed.
+   Sourceless block "user_logic/statcnt_4_0" (SFF) removed.
+    The signal "user_logic/statcnt_4_0" is sourceless and has been removed.
+     Sourceless block "user_logic/rd_dat_regs_mux0000<0>9" (ROM) removed.
+      The signal "user_logic/rd_dat_regs_mux0000<0>9" is sourceless and has been
+removed.
+       Sourceless block "user_logic/rd_dat_regs_0" (SFF) removed.
+        The signal "user_logic/rd_dat_regs<0>" is sourceless and has been removed.
+         Sourceless block "user_logic/rd_dat_regs_mux0000<0>4" (ROM) removed.
+          The signal "user_logic/rd_dat_regs_mux0000<0>4" is sourceless and has been
+removed.
+         Sourceless block "user_logic/rd_dat_mux0001<0>2" (ROM) removed.
+          The signal "user_logic/rd_dat_mux0001<0>" is sourceless and has been removed.
+           Sourceless block "user_logic/rd_dat_0" (FF) removed.
+            The signal "user_logic/rd_dat<0>" is sourceless and has been removed.
+     Sourceless block "user_logic/Mcount_statcnt_4_lut<0>_INV_0" (BUF) removed.
+      The signal "user_logic/Mcount_statcnt_4_lut<0>" is sourceless and has been
+removed.
+       Sourceless block "user_logic/Mcount_statcnt_4_cy<0>" (MUX) removed.
+        The signal "user_logic/Mcount_statcnt_4_cy<0>" is sourceless and has been
+removed.
+         Sourceless block "user_logic/Mcount_statcnt_4_cy<1>" (MUX) removed.
+          The signal "user_logic/Mcount_statcnt_4_cy<1>" is sourceless and has been
+removed.
+           Sourceless block "user_logic/Mcount_statcnt_4_cy<2>" (MUX) removed.
+            The signal "user_logic/Mcount_statcnt_4_cy<2>" is sourceless and has been
+removed.
+             Sourceless block "user_logic/Mcount_statcnt_4_cy<3>" (MUX) removed.
+              The signal "user_logic/Mcount_statcnt_4_cy<3>" is sourceless and has been
+removed.
+               Sourceless block "user_logic/Mcount_statcnt_4_cy<4>" (MUX) removed.
+                The signal "user_logic/Mcount_statcnt_4_cy<4>" is sourceless and has been
+removed.
+                 Sourceless block "user_logic/Mcount_statcnt_4_cy<5>" (MUX) removed.
+                  The signal "user_logic/Mcount_statcnt_4_cy<5>" is sourceless and has been
+removed.
+                   Sourceless block "user_logic/Mcount_statcnt_4_cy<6>" (MUX) removed.
+                    The signal "user_logic/Mcount_statcnt_4_cy<6>" is sourceless and has been
+removed.
+                     Sourceless block "user_logic/Mcount_statcnt_4_xor<7>" (XOR) removed.
+                      The signal "user_logic/Result<7>1" is sourceless and has been removed.
+                       Sourceless block "user_logic/statcnt_4_7" (SFF) removed.
+                        The signal "user_logic/statcnt_4_7" is sourceless and has been removed.
+                         Sourceless block "user_logic/rd_dat_regs_mux0000<7>9" (ROM) removed.
+                          The signal "user_logic/rd_dat_regs_mux0000<7>9" is sourceless and has been
+removed.
+                           Sourceless block "user_logic/rd_dat_regs_7" (SFF) removed.
+                            The signal "user_logic/rd_dat_regs<7>" is sourceless and has been removed.
+                             Sourceless block "user_logic/rd_dat_regs_mux0000<7>4" (ROM) removed.
+                              The signal "user_logic/rd_dat_regs_mux0000<7>4" is sourceless and has been
+removed.
+                             Sourceless block "user_logic/rd_dat_mux0001<7>1" (ROM) removed.
+                              The signal "user_logic/rd_dat_mux0001<7>" is sourceless and has been removed.
+                               Sourceless block "user_logic/rd_dat_7" (FF) removed.
+                                The signal "user_logic/rd_dat<7>" is sourceless and has been removed.
+                         Sourceless block "user_logic/Mcount_statcnt_4_xor<7>_rt" (ROM) removed.
+                          The signal "user_logic/Mcount_statcnt_4_xor<7>_rt" is sourceless and has been
+removed.
+                   Sourceless block "user_logic/Mcount_statcnt_4_xor<6>" (XOR) removed.
+                    The signal "user_logic/Result<6>1" is sourceless and has been removed.
+                     Sourceless block "user_logic/statcnt_4_6" (SFF) removed.
+                      The signal "user_logic/statcnt_4_6" is sourceless and has been removed.
+                       Sourceless block "user_logic/rd_dat_regs_mux0000<6>9" (ROM) removed.
+                        The signal "user_logic/rd_dat_regs_mux0000<6>9" is sourceless and has been
+removed.
+                         Sourceless block "user_logic/rd_dat_regs_6" (SFF) removed.
+                          The signal "user_logic/rd_dat_regs<6>" is sourceless and has been removed.
+                           Sourceless block "user_logic/rd_dat_regs_mux0000<6>4" (ROM) removed.
+                            The signal "user_logic/rd_dat_regs_mux0000<6>4" is sourceless and has been
+removed.
+                           Sourceless block "user_logic/rd_dat_mux0001<6>1" (ROM) removed.
+                            The signal "user_logic/rd_dat_mux0001<6>" is sourceless and has been removed.
+                             Sourceless block "user_logic/rd_dat_6" (FF) removed.
+                              The signal "user_logic/rd_dat<6>" is sourceless and has been removed.
+                       Sourceless block "user_logic/Mcount_statcnt_4_cy<6>_rt" (ROM) removed.
+                        The signal "user_logic/Mcount_statcnt_4_cy<6>_rt" is sourceless and has been
+removed.
+                 Sourceless block "user_logic/Mcount_statcnt_4_xor<5>" (XOR) removed.
+                  The signal "user_logic/Result<5>1" is sourceless and has been removed.
+                   Sourceless block "user_logic/statcnt_4_5" (SFF) removed.
+                    The signal "user_logic/statcnt_4_5" is sourceless and has been removed.
+                     Sourceless block "user_logic/rd_dat_regs_mux0000<5>9" (ROM) removed.
+                      The signal "user_logic/rd_dat_regs_mux0000<5>9" is sourceless and has been
+removed.
+                       Sourceless block "user_logic/rd_dat_regs_5" (SFF) removed.
+                        The signal "user_logic/rd_dat_regs<5>" is sourceless and has been removed.
+                         Sourceless block "user_logic/rd_dat_regs_mux0000<5>4" (ROM) removed.
+                          The signal "user_logic/rd_dat_regs_mux0000<5>4" is sourceless and has been
+removed.
+                         Sourceless block "user_logic/rd_dat_mux0001<5>1" (ROM) removed.
+                          The signal "user_logic/rd_dat_mux0001<5>" is sourceless and has been removed.
+                           Sourceless block "user_logic/rd_dat_5" (FF) removed.
+                            The signal "user_logic/rd_dat<5>" is sourceless and has been removed.
+                     Sourceless block "user_logic/Mcount_statcnt_4_cy<5>_rt" (ROM) removed.
+                      The signal "user_logic/Mcount_statcnt_4_cy<5>_rt" is sourceless and has been
+removed.
+               Sourceless block "user_logic/Mcount_statcnt_4_xor<4>" (XOR) removed.
+                The signal "user_logic/Result<4>1" is sourceless and has been removed.
+                 Sourceless block "user_logic/statcnt_4_4" (SFF) removed.
+                  The signal "user_logic/statcnt_4_4" is sourceless and has been removed.
+                   Sourceless block "user_logic/rd_dat_regs_mux0000<4>9" (ROM) removed.
+                    The signal "user_logic/rd_dat_regs_mux0000<4>9" is sourceless and has been
+removed.
+                     Sourceless block "user_logic/rd_dat_regs_4" (SFF) removed.
+                      The signal "user_logic/rd_dat_regs<4>" is sourceless and has been removed.
+                       Sourceless block "user_logic/rd_dat_regs_mux0000<4>4" (ROM) removed.
+                        The signal "user_logic/rd_dat_regs_mux0000<4>4" is sourceless and has been
+removed.
+                       Sourceless block "user_logic/rd_dat_mux0001<4>1" (ROM) removed.
+                        The signal "user_logic/rd_dat_mux0001<4>" is sourceless and has been removed.
+                         Sourceless block "user_logic/rd_dat_4" (FF) removed.
+                          The signal "user_logic/rd_dat<4>" is sourceless and has been removed.
+                   Sourceless block "user_logic/Mcount_statcnt_4_cy<4>_rt" (ROM) removed.
+                    The signal "user_logic/Mcount_statcnt_4_cy<4>_rt" is sourceless and has been
+removed.
+             Sourceless block "user_logic/Mcount_statcnt_4_xor<3>" (XOR) removed.
+              The signal "user_logic/Result<3>1" is sourceless and has been removed.
+               Sourceless block "user_logic/statcnt_4_3" (SFF) removed.
+                The signal "user_logic/statcnt_4_3" is sourceless and has been removed.
+                 Sourceless block "user_logic/rd_dat_regs_mux0000<3>9" (ROM) removed.
+                  The signal "user_logic/rd_dat_regs_mux0000<3>9" is sourceless and has been
+removed.
+                   Sourceless block "user_logic/rd_dat_regs_3" (SFF) removed.
+                    The signal "user_logic/rd_dat_regs<3>" is sourceless and has been removed.
+                     Sourceless block "user_logic/rd_dat_regs_mux0000<3>4" (ROM) removed.
+                      The signal "user_logic/rd_dat_regs_mux0000<3>4" is sourceless and has been
+removed.
+                     Sourceless block "user_logic/rd_dat_mux0001<3>1" (ROM) removed.
+                      The signal "user_logic/rd_dat_mux0001<3>" is sourceless and has been removed.
+                       Sourceless block "user_logic/rd_dat_3" (FF) removed.
+                        The signal "user_logic/rd_dat<3>" is sourceless and has been removed.
+                 Sourceless block "user_logic/Mcount_statcnt_4_cy<3>_rt" (ROM) removed.
+                  The signal "user_logic/Mcount_statcnt_4_cy<3>_rt" is sourceless and has been
+removed.
+           Sourceless block "user_logic/Mcount_statcnt_4_xor<2>" (XOR) removed.
+            The signal "user_logic/Result<2>1" is sourceless and has been removed.
+             Sourceless block "user_logic/statcnt_4_2" (SFF) removed.
+              The signal "user_logic/statcnt_4_2" is sourceless and has been removed.
+               Sourceless block "user_logic/rd_dat_regs_mux0000<2>9" (ROM) removed.
+                The signal "user_logic/rd_dat_regs_mux0000<2>9" is sourceless and has been
+removed.
+                 Sourceless block "user_logic/rd_dat_regs_2" (SFF) removed.
+                  The signal "user_logic/rd_dat_regs<2>" is sourceless and has been removed.
+                   Sourceless block "user_logic/rd_dat_regs_mux0000<2>4" (ROM) removed.
+                    The signal "user_logic/rd_dat_regs_mux0000<2>4" is sourceless and has been
+removed.
+                   Sourceless block "user_logic/rd_dat_mux0001<2>1" (ROM) removed.
+                    The signal "user_logic/rd_dat_mux0001<2>" is sourceless and has been removed.
+                     Sourceless block "user_logic/rd_dat_2" (FF) removed.
+                      The signal "user_logic/rd_dat<2>" is sourceless and has been removed.
+               Sourceless block "user_logic/Mcount_statcnt_4_cy<2>_rt" (ROM) removed.
+                The signal "user_logic/Mcount_statcnt_4_cy<2>_rt" is sourceless and has been
+removed.
+         Sourceless block "user_logic/Mcount_statcnt_4_xor<1>" (XOR) removed.
+          The signal "user_logic/Result<1>1" is sourceless and has been removed.
+           Sourceless block "user_logic/statcnt_4_1" (SFF) removed.
+            The signal "user_logic/statcnt_4_1" is sourceless and has been removed.
+             Sourceless block "user_logic/rd_dat_regs_mux0000<1>9" (ROM) removed.
+              The signal "user_logic/rd_dat_regs_mux0000<1>9" is sourceless and has been
+removed.
+               Sourceless block "user_logic/rd_dat_regs_1" (SFF) removed.
+                The signal "user_logic/rd_dat_regs<1>" is sourceless and has been removed.
+                 Sourceless block "user_logic/rd_dat_regs_mux0000<1>4" (ROM) removed.
+                  The signal "user_logic/rd_dat_regs_mux0000<1>4" is sourceless and has been
+removed.
+                 Sourceless block "user_logic/rd_dat_mux0001<1>1" (ROM) removed.
+                  The signal "user_logic/rd_dat_mux0001<1>" is sourceless and has been removed.
+                   Sourceless block "user_logic/rd_dat_1" (FF) removed.
+                    The signal "user_logic/rd_dat<1>" is sourceless and has been removed.
+             Sourceless block "user_logic/Mcount_statcnt_4_cy<1>_rt" (ROM) removed.
+              The signal "user_logic/Mcount_statcnt_4_cy<1>_rt" is sourceless and has been
+removed.
+       Sourceless block "user_logic/Mcount_statcnt_4_xor<0>" (XOR) removed.
+        The signal "user_logic/Result<0>1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "user_logic/Mcount_statcnt_3_cy<0>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<0>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_lut<0>" is unused and has been removed.
+   Unused block "user_logic/Mcount_statcnt_3_lut<0>_INV_0" (BUF) removed.
+    The signal "user_logic/statcnt_3_0" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_0" (SFF) removed.
+      The signal "user_logic/Result<0>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<0>" (XOR) removed.
+      The signal "user_logic/statcnt_rst" is unused and has been removed.
+       Unused block "user_logic/statcnt_rst" (FF) removed.
+        The signal "user_logic/statcnt_rst_not0001" is unused and has been removed.
+         Unused block "user_logic/statcnt_rst_not00011" (ROM) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<1>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<1>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<1>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<1>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_1" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_1" (SFF) removed.
+      The signal "user_logic/Result<1>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<1>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<2>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<2>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<2>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<2>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_2" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_2" (SFF) removed.
+      The signal "user_logic/Result<2>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<2>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<3>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<3>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<3>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<3>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_3" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_3" (SFF) removed.
+      The signal "user_logic/Result<3>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<3>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<4>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<4>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<4>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<4>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_4" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_4" (SFF) removed.
+      The signal "user_logic/Result<4>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<4>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<5>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<5>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<5>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<5>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_5" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_5" (SFF) removed.
+      The signal "user_logic/Result<5>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<5>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_cy<6>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_3_cy<6>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_3_cy<6>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_3_cy<6>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_3_6" is unused and has been removed.
+     Unused block "user_logic/statcnt_3_6" (SFF) removed.
+      The signal "user_logic/Result<6>" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_3_xor<6>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_3_xor<7>_rt" is unused and has been
+removed.
+ Unused block "user_logic/Mcount_statcnt_3_xor<7>_rt" (ROM) removed.
+  The signal "user_logic/statcnt_3_7" is unused and has been removed.
+   Unused block "user_logic/statcnt_3_7" (SFF) removed.
+    The signal "user_logic/Result<7>" is unused and has been removed.
+     Unused block "user_logic/Mcount_statcnt_3_xor<7>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<0>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<0>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_lut<0>" is unused and has been removed.
+   Unused block "user_logic/Mcount_statcnt_6_lut<0>_INV_0" (BUF) removed.
+    The signal "user_logic/statcnt_6_0" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_0" (SFF) removed.
+      The signal "user_logic/Result<0>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<0>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<1>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<1>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<1>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<1>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_1" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_1" (SFF) removed.
+      The signal "user_logic/Result<1>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<1>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<2>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<2>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<2>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<2>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_2" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_2" (SFF) removed.
+      The signal "user_logic/Result<2>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<2>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<3>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<3>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<3>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<3>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_3" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_3" (SFF) removed.
+      The signal "user_logic/Result<3>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<3>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<4>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<4>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<4>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<4>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_4" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_4" (SFF) removed.
+      The signal "user_logic/Result<4>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<4>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<5>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<5>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<5>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<5>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_5" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_5" (SFF) removed.
+      The signal "user_logic/Result<5>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<5>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_cy<6>" is unused and has been removed.
+ Unused block "user_logic/Mcount_statcnt_6_cy<6>" (MUX) removed.
+  The signal "user_logic/Mcount_statcnt_6_cy<6>_rt" is unused and has been
+removed.
+   Unused block "user_logic/Mcount_statcnt_6_cy<6>_rt" (ROM) removed.
+    The signal "user_logic/statcnt_6_6" is unused and has been removed.
+     Unused block "user_logic/statcnt_6_6" (SFF) removed.
+      The signal "user_logic/Result<6>2" is unused and has been removed.
+       Unused block "user_logic/Mcount_statcnt_6_xor<6>" (XOR) removed.
+The signal "user_logic/Mcount_statcnt_6_xor<7>_rt" is unused and has been
+removed.
+ Unused block "user_logic/Mcount_statcnt_6_xor<7>_rt" (ROM) removed.
+  The signal "user_logic/statcnt_6_7" is unused and has been removed.
+   Unused block "user_logic/statcnt_6_7" (SFF) removed.
+    The signal "user_logic/Result<7>2" is unused and has been removed.
+     Unused block "user_logic/Mcount_statcnt_6_xor<7>" (XOR) removed.
+The signal "user_logic/Mshreg_rd_ack" is unused and has been removed.
+The signal "user_logic/N01" is unused and has been removed.
+ Unused block "user_logic/rd_dat_regs_mux0000<0>11" (ROM) removed.
+The signal "user_logic/N3" is unused and has been removed.
+ Unused block "user_logic/rd_dat_regs_mux0000<0>21" (ROM) removed.
+The signal "user_logic/N4" is unused and has been removed.
+ Unused block "user_logic/rd_dat_regs_mux0000<0>31" (ROM) removed.
+The signal "user_logic/N5" is unused and has been removed.
+ Unused block "user_logic/rd_dat_regs_mux0000<0>41" (ROM) removed.
+The signal "user_logic/rd_ack" is unused and has been removed.
+ Unused block "user_logic/rd_ack" (FF) removed.
+The signal "user_logic/rd_dat_mem<0>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<1>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<2>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<3>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<4>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<5>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<6>" is unused and has been removed.
+The signal "user_logic/rd_dat_mem<7>" is unused and has been removed.
+The signal "user_logic/wr_mem" is unused and has been removed.
+ Unused block "user_logic/wr_mem1" (ROM) removed.
+Unused block "WebPHY_DATABUS_i/blk00000fa1" (ROM) removed.
+Unused block "WebPHY_DATABUS_i/blk00000fa2" (ROM) removed.
+Unused block "user_logic/Mshreg_rd_ack/SRL16E" (SRLC16E) removed.
+Unused block "user_logic/Mshreg_rd_ack/VCC" (ONE) removed.
+Unused block "user_logic/mem/Mram_mem1" (RAMB16_S4) removed.
+Unused block "user_logic/mem/Mram_mem2" (RAMB16_S4) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		WebPHY_DATABUS_i/blk00000001
+VCC 		WebPHY_DATABUS_i/blk00000002
+LUT3 		WebPHY_DATABUS_i/blk00000710
+   optimized to 0
+LUT3 		WebPHY_DATABUS_i/blk00000714
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000717
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk0000071a
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000731
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000735
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000737
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000755
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000757
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000758
+   optimized to 0
+LUT3 		WebPHY_DATABUS_i/blk0000075b
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk0000076f
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000776
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000779
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk0000078f
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000793
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk00000795
+   optimized to 0
+LUT3 		WebPHY_DATABUS_i/blk00000796
+   optimized to 0
+LUT3 		WebPHY_DATABUS_i/blk000007b0
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007ba
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007cf
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007d9
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007ee
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007f2
+   optimized to 0
+LUT3 		WebPHY_DATABUS_i/blk000007f5
+   optimized to 1
+LUT3 		WebPHY_DATABUS_i/blk000007f8
+   optimized to 1
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| act_l                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| anode<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| anode<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| anode<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| anode<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| leds<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| link_l                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| osc_in                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rx_n                               | DIFFS            | INPUT     | LVDS_25              |       |          |      |              |          |          |
+| rx_p                               | DIFFM            | INPUT     | LVDS_25              |       |          |      |              |          |          |
+| rx_tst                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| seg7<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| servo_out                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| tx_n                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| tx_p                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| tx_tst                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,9 @@
+/*
+ * Empty C++ Application
+ */
+#include <stdio.h>
+int main()
+{
+	xil_printf("Hello World!!");
+	return 0;
+}
